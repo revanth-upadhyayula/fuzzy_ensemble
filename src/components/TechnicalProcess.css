@@ -1,0 +1,23 @@
+/* src/components/TechnicalProcess.css */
+.technical-process {
+    padding: 50px 20px;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .technical-process h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .process-steps p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .process-steps strong {
+    color: #333;
+  }

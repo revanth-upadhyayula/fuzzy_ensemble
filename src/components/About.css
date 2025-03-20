@@ -1,0 +1,63 @@
+/* src/components/About.css */
+.about {
+    padding: 20px;
+  }
+  
+  .about-header {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .about-header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .mission {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: left;
+  }
+  
+  .mission h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .mission p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .values {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .value {
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .value span {
+    font-size: 40px;
+    color: #1e90ff;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .value h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .value p {
+    font-size: 16px;
+    color: #666;
+  }

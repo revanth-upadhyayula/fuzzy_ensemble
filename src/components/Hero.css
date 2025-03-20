@@ -1,0 +1,49 @@
+/* src/components/Hero.css */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .badge {
+    display: inline-block;
+    background-color: #e6f0fa;
+    color: #1e90ff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .upload-box {
+    border: 2px dashed #e0e0e0;
+    border-radius: 10px;
+    padding: 40px;
+    background-color: #f9f9f9;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .upload-placeholder {
+    text-align: center;
+  }
+  
+  .upload-placeholder p {
+    margin: 10px 0;
+    color: #666;
+  }
+  
+  .supported-formats {
+    font-size: 14px;
+    color: #999;
+  }
