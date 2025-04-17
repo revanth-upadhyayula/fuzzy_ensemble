@@ -23,13 +23,13 @@ MODEL_DIR = os.getenv("MODEL_DIR")
 
 # Model filenames (without full path for security)
 MODEL_FILES = [
-    "densenet169.keras",
-    "inceptionv3.keras",
-    "xception.keras",
-    "inceptionresnetv2.keras",
-    "vgg19.keras",
-    "mobilenetv2.keras",
-    "resnet50v2.keras"
+    "densenet169_fold1.keras",
+    "inceptionv3_fold1.keras",
+    "xception_fold1.keras",
+    "inceptionresnetv2_fold1.keras",
+    "vgg19_fold1.keras",
+    "mobilenetv2_fold1.keras",
+    "resnet50v2_fold1.keras"
 ]
 MODEL_PATHS = [os.path.join(MODEL_DIR, fname) for fname in MODEL_FILES]
 

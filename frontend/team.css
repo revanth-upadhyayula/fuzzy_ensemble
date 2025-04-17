@@ -1,0 +1,129 @@
+/* Dark Theme Team.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    background-color: #101010;
+    color: #adacac;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.6;
+}
+body {
+    background-color: #101010;
+    color: #adacac;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.6;
+}
+
+.team {
+    padding: 30px 5%;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+#back{
+    width: 10px;
+    height: 10px;
+    font-size: 40px;
+    position: fixed;
+    left: 4%;
+    top: 14%;
+}
+#back:hover{
+    cursor: pointer;
+}
+#back i{
+    border-radius: 50%;
+    color: black;
+    background-color: #adacac;
+}
+.team-header {
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.team-header h1 {
+    font-size: 6rem;
+    font-weight: 500;
+    font-family: "Orbitron", sans-serif;
+    text-align: left;
+    padding: 30px;
+}
+
+.team-header p {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 60%;
+}
+
+.member {
+    text-align: center;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.052);
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.member-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background-color: #2a2a2a;
+}
+
+.member h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.member .role {
+    font-size: 16px;
+    color: #1e90ff;
+    margin-bottom: 10px;
+}
+
+.member .description {
+    font-size: 16px;
+    color: #666;
+    /* margin-bottom: 20px; */
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #b6b6b6;
+    text-decoration: none;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e4e5e6;
+}
