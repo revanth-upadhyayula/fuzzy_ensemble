@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/research.css">
+</head>
+
+<body>
+    <div class="research">
+        <div id="back">
+            <i class="ri-arrow-left-line"></i>
+        </div>
+        <section class="research-header">
+            <h1>Research</h1>
+        </section>
+
+        <section class="methodology">
+            <div class="methodology-header">
+                <span class="badge">Methodology</span>
+                <h2>Fuzzy Ensembling Approach</h2>
+                <p>
+                    Our research focuses on developing a novel image classification approach that combines multiple deep
+                    learning models through fuzzy logic principles. This methodology addresses several key challenges in
+                    machine learning.
+                </p>
+            </div>
+            <div class="methodology-content">
+                <div class="methodology-card">
+                    <h3>Model Diversity</h3>
+                    <p>
+                        We carefully selected five architecturally diverse neural networks that exhibit complementary
+                        strengths and weaknesses. This diversity ensures that the ensemble can handle a wide range of
+                        image characteristics and classes.
+                    </p>
+                </div>
+                <div class="methodology-card">
+                    <h3>Fuzzy Rule System</h3>
+                    <p>
+                        Our core innovation is a fuzzy inference system that adaptively weights model contributions
+                        based on image-specific characteristics, model confidence patterns, and historical performance
+                        metrics.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="key-innovations">
+            <h2>Key Technical Innovations</h2>
+            <ul>
+                <li>Integration of 5 distinct neural network architectures with complementary strengths</li>
+                <li>Novel fuzzy aggregation strategy using Takagi-Sugeno inference system</li>
+                <li>Dynamic weighting mechanism based on input-dependent model reliability metrics</li>
+                <li>Uncertainty-aware confidence calibration using temperature scaling and fuzzy membership functions
+                </li>
+                <li>Specialized fuzzy rule sets for different image domains and classification challenges</li>
+            </ul>
+            <div class="math-foundation">
+                <h3>Mathematical Foundation</h3>
+                <p>
+                    For a given image <em>x</em>, each model <em>M<sub>i</sub></em> produces a probability distribution
+                    <em>P<sub>i</sub></em> over classes. Our fuzzy ensemble computes the final prediction as:
+                </p>
+                <p class="math-equation">
+                    P(y|x) = Σ(w<sub>i</sub>(x) * P<sub>i</sub>(y|x)) for i=1 to N
+                </p>
+                <p>
+                    Where w<sub>i</sub>(x) are the adaptive fuzzy weights determined by our rule system based on image
+                    characteristics and model confidence patterns.
+                </p>
+            </div>
+        </section>
+
+        <section class="performance">
+            <h2>Performance Improvements</h2>
+            <p>
+                Our fuzzy ensembling approach has consistently outperformed individual models and traditional ensembling
+                methods across multiple benchmark datasets. The most significant improvements were observed in cases
+                with limited training data and class imbalance.
+            </p>
+            <div class="performance-metrics">
+                <div class="metric">
+                    <h3>+8.3%</h3>
+                    <p>Accuracy Improvement</p>
+                </div>
+                <div class="metric">
+                    <h3>-12.5%</h3>
+                    <p>Reduced Error Rate</p>
+                </div>
+                <div class="metric">
+                    <h3>+15.2%</h3>
+                    <p>F1 Score Increase</p>
+                </div>
+                <div class="metric">
+                    <h3>-9.7%</h3>
+                    <p>Uncertainty Reduction</p>
+                </div>
+            </div>
+            <div class="benchmark-results">
+                <h3>Benchmark Results</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dataset</th>
+                            <th>Best Single Model</th>
+                            <th>Traditional Ensemble</th>
+                            <th>Our Fuzzy Ensemble</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ImageNet</td>
+                            <td>76.8%</td>
+                            <td>79.2%</td>
+                            <td>82.4%</td>
+                        </tr>
+                        <tr>
+                            <td>CIFAR-100</td>
+                            <td>85.3%</td>
+                            <td>87.9%</td>
+                            <td>91.8%</td>
+                        </tr>
+                        <tr>
+                            <td>Medical Images</td>
+                            <td>73.5%</td>
+                            <td>76.2%</td>
+                            <td>82.9%</td>
+                        </tr>
+                        <tr>
+                            <td>Satellite Imagery</td>
+                            <td>68.7%</td>
+                            <td>71.3%</td>
+                            <td>78.5%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    Our method shows the greatest improvements in domains with high uncertainty or limited training
+                    data, such as medical imaging and satellite imagery classification tasks.
+                </p>
+            </div>
+        </section>
+
+        <section class="related-papers">
+            <h2>Related Papers</h2>
+            <div class="paper">
+                <h3>Fuzzy Ensembling for Improved Image Classification</h3>
+                <p>Journal of Artificial Intelligence Research, 2023</p>
+                <p>
+                    This paper introduces our core fuzzy ensembling methodology and demonstrates its effectiveness on
+                    standard image classification benchmarks, showing consistent improvements over traditional
+                    ensembling techniques.
+                </p>
+                <a href="#">View Paper →</a>
+            </div>
+            <div class="paper">
+                <h3>Uncertainty-Aware Classification Using Fuzzy Logic</h3>
+                <p>Conference on Computer Vision and Pattern Recognition, 2022</p>
+                <p>
+                    This conference paper focuses on the uncertainty quantification aspects of our research, showing how
+                    fuzzy membership functions can be used to obtain well-calibrated confidence scores that accurately
+                    reflect model uncertainty.
+                </p>
+                <a href="#">View Paper →</a>
+            </div>
+            <div class="paper">
+                <h3>Comparative Analysis of Ensemble Techniques for Visual Recognition</h3>
+                <p>IEEE Transactions on Neural Networks and Learning Systems, 2022</p>
+                <p>
+                    This comprehensive analysis compares our fuzzy ensembling approach against 12 other ensemble methods
+                    across diverse image classification tasks, providing insights into when and why our approach
+                    outperforms alternatives.
+                </p>
+                <a href="#">View Paper →</a>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

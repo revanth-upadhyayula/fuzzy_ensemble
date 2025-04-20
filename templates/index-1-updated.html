@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Cervical Cell Classification</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <header>
+        <div id="nav">
+            <img src="/static/logo.png" alt="logo">
+            <button class="menu-toggle"><i class="ri-menu-3-line"></i></button>
+            <div id="part2">
+                <h4 class="nav-bar"><a href="#">Home</a></h4>
+                <h4 class="nav-bar"><a href="research.html">Research</a></h4>
+                <h4 class="nav-bar"><a href="team.html">Team</a></h4>
+                <h4 class="nav-bar"><a href="#">About</a></h4>
+            </div>
+        </div>
+    </header>
+    <div id="page1">
+        <div id="particles-js" class="particles"></div>
+        <div id="text">
+            <h2 class="main-head">Advanced Image Classification with Fuzzy Ensembling</h2>
+            <p>Discover similar cell images using our fuzzy logic-based ensembling model, blending AI precision with biological insights.</p>
+        </div>
+        <section id="upload-section">
+            <form id="upload-container" method="POST" action="/predict" enctype="multipart/form-data">
+                <input type="file" name="image" id="file-input" accept="image/*" required>
+                <div class="custom-dropdown" id="model-dropdown" data-state="closed">
+                    <div class="dropdown-header" id="dropdown-header">Select Models ▼</div>
+                    <div class="dropdown-list" id="dropdown-list">
+                        <label><input type="checkbox" name="models" value="DenseNet169"> DenseNet-169</label>
+                        <label><input type="checkbox" name="models" value="InceptionV3"> InceptionV3</label>
+                        <label><input type="checkbox" name="models" value="Xception"> Xception</label>
+                        <label><input type="checkbox" name="models" value="InceptionResNetV2"> InceptionResNetV2</label>
+                        <label><input type="checkbox" name="models" value="VGG19"> VGG19</label>
+                        <label><input type="checkbox" name="models" value="MobileNetV2"> MobileNetV2</label>
+                        <label><input type="checkbox" name="models" value="ResNet50V2"> ResNet50V2</label>
+                    </div>
+                </div>
+                <button type="submit" id="upload-button">Upload & Predict</button>
+            </form>
+            <div id="prediction-result"></div>
+        </section>
+    </div>
+    <div id="page2">
+        <div id="head2">
+
+            <h2 class="heading21">What is</h2>
+            <h2 class="heading22">fuzzy Ensembling</h2>
+
+            
+            
+        </div>
+        <div id="fuzzy-ensemble" class="card-container">
+            <div class="card">
+                <h2>Multi-Model Architecture</h2>
+                <p>Our system combines predictions from multiple deep learning architectures (<strong>ResNet, EfficientNet, Vision Transformer, DenseNet, and MobileNet</strong>) to leverage the strengths of each model while mitigating their individual weaknesses.</p>
+            </div>
+        
+            <div class="card">
+                <h2>Fuzzy Logic Integration</h2>
+                <p>Instead of using simple averaging or voting, we employ <strong>fuzzy logic rules</strong> to weigh each model's output based on its historical performance with similar images. This allows the system to adaptively trust specific models more in contexts where they excel.</p>
+            </div>
+        
+            <div class="card">
+                <h2>Uncertainty Quantification</h2>
+                <p>Our fuzzy ensemble provides <strong>confidence scores</strong> that are well-calibrated and accurately reflect prediction uncertainty, unlike standard softmax outputs which often produce overconfident results even when wrong.</p>
+            </div>
+        </div>
+    </div>
+    <div id="page3">
+        <div class="process-container">
+            <h2 class="process-heading">Classification Process</h2>
+            <div class="process-steps">
+                <div class="card step step-left" id="step1">
+                    <div class="step-icon"><i class="ri-upload-line"></i></div>
+                    <div class="step-content">
+                        <h3>1. Image Upload</h3>
+                        <p>Upload a microscopic image of cervical cells. The system accepts common image formats including JPG, PNG, and BMP.</p>
+                    </div>
+                </div>
+                <div class="card step step-right" id="step2">
+                    <div class="step-icon"><i class="ri-image-edit-fill"></i></div>
+                    <div class="step-content">
+                        <h3>2. Image Preprocessing</h3>
+                        <p>The uploaded image is resized to 224x224 pixels to match CNN input requirements and normalized to improve model prediction accuracy.</p>
+                    </div>
+                </div>
+                <div class="card step step-left" id="step3">
+                    <div class="step-icon"><i class="ri-robot-2-fill"></i></div>
+                    <div class="step-content">
+                        <h3>3. Model Prediction</h3>
+                        <p>Three CNN models (DenseNet-169, InceptionV3, and Xception) analyze the image, generating prediction probabilities for each cell class.</p>
+                    </div>
+                </div>
+                <div class="card step step-right" id="step4">
+                    <div class="step-icon"><i class="ri-survey-line"></i></div>
+                    <div class="step-content">
+                        <h3>4. Fuzzy Ensembling</h3>
+                        <p>Predictions from all models are combined using fuzzy membership functions, enhancing accuracy by leveraging each model's strengths.</p>
+                    </div>
+                </div>
+                <div class="card step step-left" id="step5">
+                    <div class="step-icon"><i class="ri-file-paper-2-line"></i></div>
+                    <div class="step-content">
+                        <h3>5. Results & Similar Images</h3>
+                        <p>View the classification results and similar images from the same category, providing context and comparison for medical analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="page4"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
