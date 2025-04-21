@@ -95,33 +95,48 @@ if not os.path.exists(DB_PATH):
 def extract_features(img_path=None, img_data=None):
     try:
         if img_path:
-            img = load_img(img_path, target_size=(224, 224))
+            img = Image.open(img_path).convert('RGB')
         elif img_data:
-            img = Image.open(io.BytesIO(img_data)).resize((224, 224))
+            img = Image.open(io.BytesIO(img_data)).convert('RGB')
         else:
             raise ValueError("Either img_path or img_data must be provided")
         
+        logger.debug(f"Image mode for feature extraction: {img.mode}")
+        img = img.resize((224, 224))
         img = img_to_array(img)
+        logger.debug(f"Image shape for feature extraction: {img.shape}")
+        
+        if img.shape[-1] != 3:
+            raise ValueError(f"Image has {img.shape[-1]} channels, expected 3 (RGB)")
+        
         img = img / 255.0
         img = np.expand_dims(img, axis=0)
         features = vgg_model.predict(img, verbose=0)
         return features.flatten()
     except Exception as e:
-        # logger.error(f"Error extracting features: {e}")
+        logger.error(f"Error extracting features: {e}")
         raise
 
 # Preprocess image for classification models
 def preprocess_image_for_models(img_data):
     try:
-        img = Image.open(io.BytesIO(img_data)).resize((224, 224))
+        # Open image and convert to RGB to ensure 3 channels
+        img = Image.open(io.BytesIO(img_data)).convert('RGB')
+        # logger.debug(f"Image mode after conversion: {img.mode}")
+        
+        # Resize to target size
+        img = img.resize((224, 224))
+        
+        # Convert to array and normalize
         img = img_to_array(img)
+        # logger.debug(f"Image shape after conversion: {img.shape}")
+        
         img = img / 255.0
         img = np.expand_dims(img, axis=0)
         return img
     except Exception as e:
         # logger.error(f"Error preprocessing image: {e}")
         raise
-
 # Fuzzy ensemble logic
 def expo_equ(probs):
     return 1 - np.exp(-((probs - 1) ** 2) / 2)
